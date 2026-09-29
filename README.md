@@ -1,4 +1,10 @@
+<img align="right" src="assets/pack_icon.png" alt="Syroy Wombat Logo" height="60">
+
 # Wombat Addon
+
+<p align="center">
+  <img src="assets/screenshot1.png" alt="Wombat In-Game Screenshot" width="80%">
+</p>
 
 Welcome to the Wombat addon! This project introduces a custom Wombat entity to your Minecraft world, complete with unique behaviors, taming mechanics, and a day/night sleep cycle. 
 
