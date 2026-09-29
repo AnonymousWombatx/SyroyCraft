@@ -34,3 +34,8 @@ This project is protected and licensed under the **PolyForm Noncommercial Licens
 * **Not Allowed:** You may **not** use this addon for any commercial purposes. This includes, but is not limited to, placing it behind a paywall, including it in a monetized server, or selling it as part of a bundle.
 
 By using this software, you agree to these terms. Please see the [`LICENSE`](LICENSE.md) file in this repository for the complete legal text and exact details.
+
+### Asset and Image Exceptions
+
+* **Original Assets (Logos/Branding):** My original project logo and branding assets (located in the `assets/` folder) are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**. Please see `assets/LICENSE.md` for the full license text.
+* **Game Screenshots:** Any images containing in-game assets, textures, or designs are the intellectual property of Mojang Synergies AB and Microsoft Corporation. They are included here strictly as unofficial reference material and are excluded from the above licenses.
