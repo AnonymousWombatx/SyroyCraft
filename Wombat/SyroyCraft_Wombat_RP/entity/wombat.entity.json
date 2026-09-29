@@ -1,0 +1,70 @@
+{
+    "format_version": "1.26.50",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "syroy:wombat",
+            "min_engine_version": "1.8.0",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/wombat/wombat"
+            },
+            "geometry": {
+                "default": "geometry.wombat"
+            },
+            "animations": {
+                "setup": "animation.wombat.setup",
+                "idle": "animation.wombat.idle",
+                "walk": "animation.wombat.walk",
+                "run": "animation.wombat.run",
+                "sit_down": "animation.wombat.sit_down",
+                "sit": "animation.wombat.sit",
+                "stand_up": "animation.wombat.stand_up",
+                "lay_down": "animation.wombat.lay_down",
+                "sleep": "animation.wombat.sleep",
+                "wake_up": "animation.wombat.wake_up",
+                "eat": "animation.wombat.eat",
+                "hurt": "animation.wombat.hurt",
+                "death": "animation.wombat.death",
+                "windup": "animation.wombat.attack_windup",
+                "butt_attack": "animation.wombat.butt_attack",
+                "attack_reset": "animation.wombat.attack_reset",
+                "melee_attack": "animation.wombat.melee_attack",
+                "look_at_target": "animation.wombat.look_at_target",
+                "baby_transform": "animation.wombat.baby_transform",
+                "move": "controller.animation.wombat.move",
+                "sit_ctrl": "controller.animation.wombat.sit",
+                "lay_ctrl": "controller.animation.wombat.lay",
+                "eat_ctrl": "controller.animation.wombat.eat",
+                "hurt_ctrl": "controller.animation.wombat.hurt",
+                "attack_ctrl": "controller.animation.wombat.attack",
+                "melee_controller": "controller.animation.wombat.melee"
+            },
+            "scripts": {
+                "animate": [
+                    "setup",
+                    "look_at_target",
+                    { "baby_transform": "query.is_baby" },
+                    "move",
+                    "sit_ctrl",
+                    "lay_ctrl",
+                    "eat_ctrl",
+                    "hurt_ctrl",
+                    "attack_ctrl",
+                    "melee_controller"
+                ]
+            },
+            "render_controllers": ["controller.render.wombat"],
+            "spawn_egg": {
+                "base_color": "#3c2614",
+                "overlay_color": "#645f00"
+            },
+            "sound_effects": {
+            "ambient": "entity.wombat.ambient",
+            "hurt": "entity.wombat.hurt",
+            "death": "entity.wombat.death"
+            }                
+        }
+    }
+}

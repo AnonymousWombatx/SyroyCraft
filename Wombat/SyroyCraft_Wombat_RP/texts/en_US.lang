@@ -1,0 +1,3 @@
+entity.syroy:wombat.name=wombat
+item.spawn_egg.entity.syroy:wombat.name=Spawn wombat
+action.hint.exit.syroy:wombat=Tap sneak to dismount

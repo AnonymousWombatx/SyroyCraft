@@ -1,0 +1,17 @@
+{
+  "format_version": "1.26.50",
+  "sound_definitions": {
+    "entity.wombat.idle": {
+      "category": "neutral",
+      "sounds": ["sounds/entity/wombat/wombat_idle"]
+    },
+    "entity.wombat.hurt": {
+      "category": "neutral",
+      "sounds": ["sounds/entity/wombat/wombat_hurt"]
+    },
+    "entity.wombat.death": {
+      "category": "neutral",
+      "sounds": ["sounds/entity/wombat/wombat_dead"]
+    }
+  }
+}

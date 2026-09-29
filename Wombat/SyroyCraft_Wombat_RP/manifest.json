@@ -1,0 +1,24 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "SyroyCraft - Wombat RP",
+		"description": "Model, animations, textures and sounds for the aggressive SyroyCraft wombat.",
+		"uuid": "20a5d04c-6764-42f1-b80b-8ec0dd7c6d50",
+		"version": [1, 0, 1],
+		"min_engine_version": [1, 16, 0]
+	},
+	"metadata": {
+		"authors": ["AnonymousWombatX"],
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.8.3"]
+		}
+	},
+	"modules": [
+		{
+			"description": "SyroyCraft",
+			"type": "resources",
+			"uuid": "f3f4017f-4997-41c2-a9a9-ef9111b6975a",
+			"version": [1, 0, 1]
+		}
+	]
+}

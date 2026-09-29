@@ -1,0 +1,170 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.wombat.move": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{"walk": "query.ground_speed > 0.01"}
+					]
+				},
+				"walk": {
+					"animations": ["walk"],
+					"transitions": [
+						{"idle": "query.ground_speed <= 0.01"},
+						{"run": "query.ground_speed > 1.2"}
+					]
+				},
+				"run": {
+					"animations": ["run"],
+					"transitions": [
+						{"walk": "query.ground_speed <= 1.2 && query.ground_speed > 0.01"},
+						{"idle": "query.ground_speed <= 0.01"}
+					]
+				}
+			}
+		},
+		"controller.animation.wombat.sit": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"sit_down": "query.is_sitting"}
+					]
+				},
+				"sit_down": {
+					"animations": ["sit_down"],
+					"transitions": [
+						{"sitting": "query.all_animations_finished"}
+					]
+				},
+				"sitting": {
+					"animations": ["sit"],
+					"transitions": [
+						{"stand_up": "!query.is_sitting"}
+					]
+				},				
+				"stand_up": {
+					"animations": ["stand_up"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				}				
+			}
+		},
+		"controller.animation.wombat.lay": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"lay_down": "query.property('syroy:sleeping') == true"}
+					]
+				},
+				"lay_down": {
+					"animations": ["lay_down"],
+					"transitions": [
+						{"laying": "query.all_animations_finished"}
+					]
+				},
+				"laying": {
+					"animations": ["sleep"],
+					"transitions": [
+						{"wake_up": "query.property('syroy:sleeping') == false"}
+					]
+				},				
+				"wake_up": {
+					"animations": ["wake_up"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				}				
+			}
+		},	
+		"controller.animation.wombat.eat": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"eat": "query.is_eating"}
+					]
+				},
+				"eat": {
+					"animations": ["eat"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				}			
+			}
+		},
+		"controller.animation.wombat.hurt": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"hurt": "query.hurt_time>0.0"},
+						{"death": "!query.is_alive"}
+					]
+				},
+				"hurt": {
+					"animations": ["hurt"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				},
+				"death": {
+					"animations": ["death"],
+					"transitions": [
+						{"dead": "query.all_animations_finished"}
+					]
+				},
+				"dead": {}												
+			}
+		},
+		"controller.animation.wombat.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"windup": "query.is_ram_attacking"}
+					]
+				},
+				"windup": {
+					"animations": ["windup"],
+					"transitions": [
+						{"butt_attack": "query.all_animations_finished"}
+					]
+				},
+				"butt_attack": {
+					"animations": ["butt_attack"],
+					"transitions": [
+						{"attack_reset": "query.all_animations_finished"}
+					]
+				},
+				"attack_reset": {
+					"animations": ["attack_reset"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				}												
+			}
+		},
+		"controller.animation.wombat.melee": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"melee": "variable.attack_time > 0 && !query.is_ram_attacking"}
+					]
+				},
+				"melee": {
+					"animations": ["melee_attack"],
+					"transitions": [
+						{"default": "query.all_animations_finished"}
+					]
+				}
+			}
+		}				
+	}
+}

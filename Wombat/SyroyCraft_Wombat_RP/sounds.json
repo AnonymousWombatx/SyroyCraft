@@ -1,0 +1,27 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "syroy:wombat": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "ambient": {
+            "sound": "entity.wombat.idle",
+            "volume": 1.0,
+            "pitch": [0.8, 1.2]
+          },
+          "hurt": {
+            "sound": "entity.wombat.hurt",
+            "volume": 1.0,
+            "pitch": [0.9, 1.1]
+          },
+          "death": {
+            "sound": "entity.wombat.death",
+            "volume": 1.0,
+            "pitch": 1.0
+          }
+        }
+      }
+    }
+  }
+}
